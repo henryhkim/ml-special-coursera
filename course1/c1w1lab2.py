@@ -17,4 +17,30 @@ plt.scatter(x_train, y_train, marker='x', color='red')
 plt.title("housing prices")
 plt.ylabel("price in $1000s")
 plt.xlabel("size 1000 sq ft")
-plt.show()
+# plt.show()
+
+w = 200
+b = 100
+print(f"w = {w}, b = {b}")
+
+def compute_model_output(x, w, b):
+    m = x.shape[0]
+    f_wb = np.zeros(m)
+    for i in range(m):
+        f_wb[i] = w * x[i] + b
+    return f_wb
+
+f_wb = compute_model_output(x_train, w, b)
+print(f"f_wb = {f_wb}")
+# plot the model output
+plt.plot(x_train, f_wb, color='blue', label='our prediction')
+plt.scatter(x_train, y_train, marker='x', color='red', label='actual values (training data)')
+plt.title("housing prices")
+plt.ylabel("price in $1000s")
+plt.xlabel("size 1000 sq ft")
+plt.legend()
+# plt.show()
+
+x_i = 1.2
+cost_1200sqft = w * x_i + b
+print(f"cost of 1200 sqft house = {cost_1200sqft:0f} thousand dollars")
