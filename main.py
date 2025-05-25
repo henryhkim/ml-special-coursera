@@ -1,3 +1,6 @@
+import sys
+
+
 # This is a sample Python script.
 
 # Press ⌃R to execute it or replace it with your code.
@@ -12,5 +15,10 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
+
+    print("Python version")
+    print(sys.version)
+    print("Version info.")
+    print(sys.version_info)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
